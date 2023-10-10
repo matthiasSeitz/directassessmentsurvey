@@ -28,8 +28,8 @@ echo "Session" .$_SESSION['session'];
   <label for="session">Session ID</label>
     <input type="text" id="session" name="session">
     <br><br>
-    <label for="fuser">Name</label>
-    <input type="text" id="fuser" name="fuser">
+    <label for="user">Name</label>
+    <input type="text" id="user" name="user">
     <br><br>
     <input type="submit" class="button" name="submit" value="submit">
   </form>

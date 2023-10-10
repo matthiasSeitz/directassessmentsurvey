@@ -9,10 +9,10 @@ echo '<br><h1 class="align-center">'. $question. '</h1>';
 <br>
 
 <form action="" method="post">
-  <input type="hidden" value="questionnaire1_buttons.php" name="fnavi">
-  <input type="hidden" value="questionnaire1_start" name="fquestion">
+  <input type="hidden" value="questionnaire1_buttons.php" name="navi">
+  <input type="hidden" value="questionnaire1_start" name="question">
 
-  <input type="submit" name="fanswer" value='start questionnaire'>
+  <input type="submit" name="item01" value='start questionnaire'>
 </form>
 
 </p>

@@ -5,7 +5,7 @@ include('function/mysql_connect.php');
 $user = $_SESSION['user'];
 $session = $_SESSION['session'];
 
-$rows = $pdo->query("SELECT * FROM travog WHERE navi NOT LIKE '' AND `session` LIKE '$session' AND user IN ('navi', '$user') ORDER BY id DESC LIMIT 1")->fetch();
+$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi` NOT LIKE '' AND `session` LIKE '$session' AND `user` IN ('navi', '$user') ORDER BY `id` DESC LIMIT 1")->fetch();
 $navi = $rows['navi'];
 
 
@@ -23,11 +23,9 @@ $now = microtime(true);
       } 
     
 
-
-
-// Filter: Wenn ein neuer Navi-key hinterlegt wurde, wird die main-Seite erneuert. 
-// Der Filter ist nötig, da ansonsten Buttons durch die ständige Erneuerung nicht gut geklickt werden könnten.
-// Durch den Filter werden die Seiten mit den Buttons nur einmal geladen und bleiben dann bestehen bis ein neues Keywort in navi hinterlegt wird. 
+// Filter: If a new Navi-key was deposited, the main page is renewed. 
+//The filter is necessary, because otherwise buttons could not be clicked well by the constant renewal.
+// By the filter the pages with the buttons are loaded only once and remain then until a new keyword is deposited in navi. 
 if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
 
     echo '<meta http-equiv="refresh" content="0; URL=';
@@ -46,6 +44,5 @@ if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
     }
 
 }
-
 
 ?>

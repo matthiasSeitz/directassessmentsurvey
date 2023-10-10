@@ -9,21 +9,21 @@ $_SESSION['pageTimestamp'] = microtime(true);
 
 include("function/mysql_connect.php");
 
-# Datenbankeintrag
-$navi = $_POST["fnavi"];
+# Database entry
+$navi = $_POST["navi"];
 $timestamp = microtime(true);
 include("function/mysql_insert.php");
 
-// Darstellung der Bildschirme
-$rows = $pdo->query("SELECT * FROM travog WHERE navi NOT LIKE '' AND `session` LIKE '$session' ORDER BY id DESC LIMIT 1")->fetch();
+// Showing the content of mobileDevices and bigScreen
+$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
 $_SESSION['devices'] = $rows['navi'];
 
-$rows = $pdo->query("SELECT * FROM travog WHERE naviScreen NOT LIKE '' AND `session` LIKE '$session' ORDER BY id DESC LIMIT 1")->fetch();
+$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `naviScreen` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
 $_SESSION['screen'] = $rows['naviScreen'];
 
 # Variables 
-$form_pre = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightblue; text-align:left;' id='fnavi' name='fnavi' value='";
-$form_pre_vid = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightgreen; text-align:left;' id='fnaviScreen' name='fnaviScreen' value='";
+$form_pre = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightblue; text-align:left;' id='navi' name='navi' value='";
+$form_pre_vid = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightgreen; text-align:left;' id='naviScreen' name='naviScreen' value='";
 
 $form_post = "'></form>";
 
@@ -38,15 +38,15 @@ $dummy_post = "'></form>";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- <link rel="stylesheet" href="main.css" /> -->
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!--Verhindert html5 -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!--Prevents html5 -->
     <title>Navi</title>
   </head>
-  <body onload = "table();">
+  <body onload = "update();">
     <script type="text/javascript">
-      function table(){
+      function update(){
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function(){
-          document.getElementById("table").innerHTML = this.responseText;
+          document.getElementById("update").innerHTML = this.responseText;
         }
         xhttp.open("GET", "naviSystem.php");
         xhttp.send();
@@ -55,14 +55,14 @@ $dummy_post = "'></form>";
       let randomNumber = Math.floor((Math.random() * 300) + 300); // between 300 and 600
 
       setInterval(function(){
-        table();
+        update();
       }, randomNumber);
     </script>
 
-<content id="table"></content> <!-- contains the js-code. Position is important-->
+<content id="update"></content> <!-- contains the js-code. Position is important-->
 
 
-.. <!-- damit die Seite nicht rutscht, während "automaticly logout" noch nicht eingeblendet ist-->
+.. <!-- the points are only to fix the Layout-->
 <div style='font-size:200%'>Session ID: 
 <?php 
 echo $_SESSION['session'];
@@ -70,8 +70,8 @@ echo $_SESSION['session'];
 </div>
 
 <form action="" method="post">
-  <input type="hidden" name='fnaviScreen' value='logout.php'>
-  <input type="hidden" name="fnavi" value="logout.php">
+  <input type="hidden" name='naviScreen' value='logout.php'>
+  <input type="hidden" name="navi" value="logout.php">
   <input type="submit" class="button" name="submit" value="quit session">
 </form>
 
@@ -80,7 +80,7 @@ echo $_SESSION['session'];
     <div style='display:flex'>
         <div style='width:50%; height:100%; border:5px'>
             <div style='border:5px; float:left'>
-            <large>Devices (participants)</large>
+            <large>mobileDevices (participants)</large>
                 <?php
                 echo $form_pre . "welcome_text.php" . $form_post;
                 echo $form_pre . "qr_devices.php" . $form_post;
@@ -123,7 +123,7 @@ echo $_SESSION['session'];
         </div>
         <div style='width:50%'>
             <div style='border:5px; float:left'>
-            <large>Screens</large>
+            <large>bigScreen</large>
                 <?php
                 echo $form_pre_vid . "welcome_screen.php" . $form_post;
 

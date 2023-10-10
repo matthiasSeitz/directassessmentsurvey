@@ -16,13 +16,9 @@ session_destroy();
 </head>
 <body>
 
-  
 <content>
-
   <h1>Thank you</h1>
-
 </content>
-
 
 </body>
 </html>

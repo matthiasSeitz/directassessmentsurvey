@@ -17,10 +17,10 @@ I declare that I consent to the recording of study data and its use in anonymize
 <br>
 
 <form action="" method="post">
-  <input type="hidden" value="break.php" name="fnavi">
-  <input type="hidden" value="declarationOfConsens" name="fquestion">
+  <input type="hidden" value="break.php" name="navi">
+  <input type="hidden" value="declarationOfConsens" name="question">
 
-  <input type="submit" name="fanswer" value='I agree'>
+  <input type="submit" name="item01" value='I agree'>
 </form>
 
 </p>

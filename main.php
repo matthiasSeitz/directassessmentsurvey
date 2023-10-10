@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['submit'])){
-$_SESSION['user'] = $_POST['fuser'];
+$_SESSION['user'] = $_POST['user'];
 $_SESSION['session'] = $_POST['session'];
 }
 $_SESSION['pageTimestamp'] = microtime(true);
@@ -47,13 +47,12 @@ include('function/mysql_connect.php');
   ?>
 </fullscreen_box>
 
-
 <?php 
-  $rows = $pdo->query("SELECT navi FROM travog WHERE id > 0 ORDER BY id DESC LIMIT 1")->fetch();
+// This part is important to avoid continuous updating of the page.
+  $rows = $pdo->query("SELECT `navi` FROM `dataDAS` WHERE `id` > 0 ORDER BY `id` DESC LIMIT 1")->fetch();
   $navi = $rows[0];
     include('function/mysql_insert.php'); 
 ?>
-
 
 </body>
 </html>

@@ -4,7 +4,7 @@ $session = $_SESSION['session'];
 
 include('function/mysql_connect.php');
 
-$rows = $pdo->query("SELECT * FROM `travog` WHERE `naviScreen` NOT LIKE '' AND `session` LIKE '$session' ORDER BY id DESC LIMIT 1")->fetch();
+$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `naviScreen` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
 $navi = $rows['naviScreen'];
 
 // Logout Session automaticly after...
@@ -20,8 +20,7 @@ if($delta < 0){
     echo 'logout.php">';       
   } 
 
-// Filter: Seite erneuern, wenn ein neuer Navi-key hinterlegt wurde.
-
+// Filter: If a new Navi-key was deposited, the main page is renewed. 
 if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
 
     echo '<meta http-equiv="refresh" content="0; URL=';

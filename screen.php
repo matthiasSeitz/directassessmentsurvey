@@ -14,12 +14,12 @@ include("function/mysql_connect.php");
 <link rel="stylesheet" href="main.css" />
 <title>screen</title>
 </head>
-<body onload = "table();">
+<body onload = "update();">
     <script type="text/javascript">
-      function table(){
+      function update(){
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function(){
-          document.getElementById("table").innerHTML = this.responseText;
+          document.getElementById("update").innerHTML = this.responseText;
         }
         xhttp.open("GET", "screenSystem.php");
         xhttp.send();
@@ -28,11 +28,11 @@ include("function/mysql_connect.php");
       let randomNumber = Math.floor((Math.random() * 300) + 300); // between 300 and 600
 
       setInterval(function(){
-        table();
+        update();
       }, randomNumber);
     </script>
 
-<content id="table"></content>
+<content id="update"></content>
 
 <fullscreen_box style="background-color:black">
   <?php
@@ -44,8 +44,8 @@ include("function/mysql_connect.php");
 </fullscreen_box>
 
 <?php 
-// Der Part ist wichtig, damit kein continuierliches Updaten der Seite erfolgt. 
-  $rows = $pdo->query("SELECT naviScreen FROM travog WHERE id > 0 ORDER BY id DESC LIMIT 1")->fetch();
+// This part is important to avoid continuous updating of the page.
+  $rows = $pdo->query("SELECT `naviScreen` FROM `dataDAS` WHERE `id` > 0 ORDER BY `id` DESC LIMIT 1")->fetch();
   $navi = $rows[0];
     include('function/mysql_insert.php'); 
 ?>
