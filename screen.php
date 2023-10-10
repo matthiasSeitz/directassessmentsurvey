@@ -5,7 +5,6 @@ if (isset($_POST['submit'])){
 }
 $_SESSION['pageTimestamp'] = microtime(true);
 include("function/mysql_connect.php");
-//echo "Session ID: " .$_SESSION['session'];
 ?>
 <html lang="de" class="notranslate" translate="no" dir="ltr">
 <head>
@@ -44,15 +43,12 @@ include("function/mysql_connect.php");
   ?>
 </fullscreen_box>
 
-
-
 <?php 
 // Der Part ist wichtig, damit kein continuierliches Updaten der Seite erfolgt. 
   $rows = $pdo->query("SELECT naviScreen FROM travog WHERE id > 0 ORDER BY id DESC LIMIT 1")->fetch();
   $navi = $rows[0];
     include('function/mysql_insert.php'); 
 ?>
-
 
 </body>
 </html>

@@ -1,1 +1,0 @@
-<h1 style="text-align:center">This is an important information</h1>

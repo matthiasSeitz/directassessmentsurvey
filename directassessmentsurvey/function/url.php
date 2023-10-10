@@ -1,1 +1,0 @@
-https://matthiasseitz.de/travogPub/

@@ -16,12 +16,12 @@ include('function/mysql_connect.php');
 <link rel="stylesheet" href="main.css" />
 <title>main</title>
 </head>
-<body onload = "table();">
+<body onload = "update();">
     <script type="text/javascript">
-      function table(){
+      function update(){
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function(){
-          document.getElementById("table").innerHTML = this.responseText;
+          document.getElementById("update").innerHTML = this.responseText;
         }
         xhttp.open("GET", "mainSystem.php");
         xhttp.send();
@@ -30,11 +30,11 @@ include('function/mysql_connect.php');
       let randomNumber = Math.floor((Math.random() * 300) + 300); // between 300 and 600
 
       setInterval(function(){
-        table();
+        update();
       }, randomNumber);
     </script>
 
-<content id="table"></content> <!-- contains the js-code. Position is important-->
+<content id="update"></content> <!-- contains the js-code. Position is important-->
 
 <fullscreen_box>
   <?php

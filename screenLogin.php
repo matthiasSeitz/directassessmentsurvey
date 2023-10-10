@@ -1,14 +1,5 @@
 <?php
 session_start();
-//if (isset($_POST['submit'])){
-//session_destroy();
-//session_start();
-//$_SESSION['session'] = $_POST['session'];   
-//header('Location: https://www.matthiasseitz.de/travogPub/screen.php');
-// WICHTIG: Die Weiterleitung mit header funktioniert nur, 
-// wenn davor NICHTS anderes steht. 
-// Also kein echo Tag, keine Leerzeile etc. 
-//}
 ?>
 
 <!DOCTYPE html>

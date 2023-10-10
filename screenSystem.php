@@ -7,11 +7,8 @@ include('function/mysql_connect.php');
 $rows = $pdo->query("SELECT * FROM `travog` WHERE `naviScreen` NOT LIKE '' AND `session` LIKE '$session' ORDER BY id DESC LIMIT 1")->fetch();
 $navi = $rows['naviScreen'];
 
-
 // Logout Session automaticly after...
 
-//$rows = $pdo->query("SELECT * FROM travog WHERE `session` NOT LIKE '' AND `session` LIKE '$session' ORDER BY id DESC LIMIT 1")->fetch();
-//$sessionTime = $rows['timestamp'];
 $now = microtime(true);
 
 $delta = 120 - ($now - $_SESSION['pageTimestamp']);
@@ -23,13 +20,6 @@ if($delta < 0){
     echo 'logout.php">';       
   } 
 
-//echo $delta;
-//echo "<br>SessionTime" .$sessionTime;
-//echo "<br>Session:" .$_SESSION['session'];
-//echo "<br>Navi:" .$navi;
-
-
-
 // Filter: Seite erneuern, wenn ein neuer Navi-key hinterlegt wurde.
 
 if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
@@ -40,6 +30,5 @@ if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
 
     $_SESSION['currentNavi'] = $navi;
 }
-
 
 ?>

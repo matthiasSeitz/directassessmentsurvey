@@ -6,9 +6,6 @@ if(isset($_POST['login'])){
 $_SESSION['user'] = "navi";
 $session = $_SESSION['session'];
 $_SESSION['pageTimestamp'] = microtime(true);
-// if(isset($_POST['session'])){
-//  $_SESSION['session'] = $_POST['session'];
-//}
 
 include("function/mysql_connect.php");
 
@@ -32,16 +29,6 @@ $form_post = "'></form>";
 
 $dummy_pre = "<form><input type='submit' style='width:200px; height:30px; background-color:white; ' value='";
 $dummy_post = "'></form>";
-
-
-
-
-//if(strpos($_POST['fnaviScreen'], "screen") !==FALSE){
-//    $_SESSION['screen'] = $_POST['fnaviScreen'];
-//  } 
-//if(strpos($_POST['fnavi'], "screen") ===FALSE) {
-//$_SESSION['devices'] = $_POST['fnavi'];
-//}
 
 ?>
 
@@ -88,13 +75,7 @@ echo $_SESSION['session'];
   <input type="submit" class="button" name="submit" value="quit session">
 </form>
 
-
 <hr>
-
-
-
-
-
     <fullscreen_box>
     <div style='display:flex'>
         <div style='width:50%; height:100%; border:5px'>

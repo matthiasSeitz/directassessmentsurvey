@@ -1,20 +1,7 @@
 <?php
 session_start();
-//session_destroy();
 $_SESSION['user'] = "navi";
-
-//if(isset($_POST['login'])){
-//    $_SESSION['session'] = $_POST['session'];
-//    echo '<meta http-equiv="refresh" content="0; URL=navi.php"';
-//}
-
 include("function/mysql_connect.php");
-
-
-
-  // echo "<h3>Session ID: " .$_SESSION['session'] ."</h3>";
-
-
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +26,6 @@ include("function/mysql_connect.php");
       <input type="submit" class="button" name="login" value="define">
     </form>
   </body>
-
 
   <?php
   $timestamp = microtime(true);

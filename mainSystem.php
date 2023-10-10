@@ -11,13 +11,10 @@ $navi = $rows['navi'];
 
 // Logout Session automaticly after...
 
-//$rows = $pdo->query("SELECT * FROM travog WHERE `session` NOT LIKE '' AND `session` LIKE '$session' ORDER BY id DESC LIMIT 1")->fetch();
-//$sessionTime = $rows['timestamp'];
 $now = microtime(true);
 
   $delta = 120 - ($now - $_SESSION['pageTimestamp']);
   echo "<qrcode class='top-right'><br>Logout in " .round($delta,0) ." s<qrcode>";
-
   
   if($delta < 0){
         echo '<meta http-equiv="refresh" content="0; URL=';
@@ -25,21 +22,6 @@ $now = microtime(true);
         echo 'logout.php">';       
       } 
     
-    //echo "sessionTime: " .$sessionTime;
-    //echo "<br>delta: " .$delta;
-    //echo "<br>Session: " .$session;
-    //echo "<br>current Navi: " .$_SESSION['currentNavi'];
-    //echo "<br>Navi: " .$navi;
-    
-
-
-  // Filter
-
-//if(strpos($navi, "break.php") !== false) {
-//  echo '<meta http-equiv="refresh" content="0; URL=';
-//  include('function/url.php'); 
-//  echo 'break.php">';
-//}
 
 
 
