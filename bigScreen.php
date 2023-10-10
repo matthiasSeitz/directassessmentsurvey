@@ -21,7 +21,7 @@ include("function/mysql_connect.php");
         xhttp.onload = function(){
           document.getElementById("update").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "screenSystem.php");
+        xhttp.open("GET", "bigScreenUpdate.php");
         xhttp.send();
       }
 

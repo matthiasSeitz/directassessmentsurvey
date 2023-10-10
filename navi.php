@@ -48,7 +48,7 @@ $dummy_post = "'></form>";
         xhttp.onload = function(){
           document.getElementById("update").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "naviSystem.php");
+        xhttp.open("GET", "naviUpdate.php");
         xhttp.send();
       }
 
@@ -83,7 +83,7 @@ echo $_SESSION['session'];
             <large>mobileDevices (participants)</large>
                 <?php
                 echo $form_pre . "welcome_text.php" . $form_post;
-                echo $form_pre . "qr_devices.php" . $form_post;
+                echo $form_pre . "qr_mobileDevices.php" . $form_post;
                 echo $form_pre . "calibration_text.php" . $form_post;
                 echo $form_pre . "question_agreement.php" . $form_post;
 
@@ -127,13 +127,13 @@ echo $_SESSION['session'];
                 <?php
                 echo $form_pre_vid . "welcome_screen.php" . $form_post;
 
-                echo $form_pre_vid . "qr_screen.php" . $form_post;
+                echo $form_pre_vid . "qr_bigScreen.php" . $form_post;
                 echo $form_pre_vid . "screen_stop.php" . $form_post;
                 echo "<br>";
-                echo $form_pre_vid . "screen_calibration_display.php" . $form_post;
+                echo $form_pre_vid . "calibration_display.php" . $form_post;
                 echo $form_pre_vid . "screen_stop.php" . $form_post;
                 echo "<br>";
-                echo $form_pre_vid . "screen_song1_display.php" . $form_post;
+                echo $form_pre_vid . "song1_play.php" . $form_post;
                 echo $form_pre_vid . "screen_stop.php" . $form_post;
                 ?>
             </div>

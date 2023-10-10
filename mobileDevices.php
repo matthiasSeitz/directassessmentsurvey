@@ -23,7 +23,7 @@ include('function/mysql_connect.php');
         xhttp.onload = function(){
           document.getElementById("update").innerHTML = this.responseText;
         }
-        xhttp.open("GET", "mainSystem.php");
+        xhttp.open("GET", "mobileDevicesUpdate.php");
         xhttp.send();
       }
 

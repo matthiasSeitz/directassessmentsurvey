@@ -30,7 +30,7 @@ if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
 
     echo '<meta http-equiv="refresh" content="0; URL=';
     include('function/url.php'); 
-    echo 'main.php">';
+    echo 'mobileDevices.php">';
 
     $_SESSION['currentNavi'] = $navi;
     $_SESSION['display'] = $navi;

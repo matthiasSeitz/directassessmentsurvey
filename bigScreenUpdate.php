@@ -25,7 +25,7 @@ if(strcmp($_SESSION['currentNavi'], $navi)!=0) {
 
     echo '<meta http-equiv="refresh" content="0; URL=';
     include('function/url.php'); 
-    echo 'screen.php">';
+    echo 'bigScreen.php">';
 
     $_SESSION['currentNavi'] = $navi;
 }

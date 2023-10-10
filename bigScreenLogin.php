@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
-    <title>index</title>
+    <title>Login</title>
   </head>
 <body>
 
@@ -20,7 +20,7 @@ session_start();
         <br>
         <h4>Please enter the ID of the session you would like to attend.</h4>
         <p></p>
-        <form action="screen.php" method="post">
+        <form action="bigScreen.php" method="post">
           <br>
           <label for="session">Session ID</label>
           <input type="text" id="session" name="session">

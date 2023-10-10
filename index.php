@@ -24,8 +24,8 @@ session_start();
                         <br>Your device (preferably a PC) will display the navigation page of the session.
                         <br>Other devices can join the session by clicking the links below 
                         <br>or scanning the QR Codes on the folloging navigation page on that device.</p>
-            <p><a href="mainLogin.php">Join a session with a MOVILE DEVICE <br>for participation</a></p>
-            <p><a href="screenLogin.php">Join a session with a SCREEN <br>for displaying content</a></p>
+            <p><a href="mobileDevicesLogin.php">Join a session with a MOVILE DEVICE <br>for participation</a></p>
+            <p><a href="bigScreenLogin.php">Join a session with a BIG SCREEN <br>for displaying content</a></p>
 
 
         </content>
