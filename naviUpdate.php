@@ -5,8 +5,8 @@ include('function/mysql_connect.php');
 $_SESSION['user'] = "navi";
 $session = $_SESSION['session'];
    
-      $rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
-      $navi = $rows['navi'];
+      $rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi_mobileDevices` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
+      $navi = $rows['navi_mobileDevices'];
       $naviTime = $rows['timestamp'];
 
       // Logout Session automaticly after...

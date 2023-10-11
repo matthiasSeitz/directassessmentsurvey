@@ -17,8 +17,8 @@ include("function/mysql_connect.php");
 
   <body>
   <form action="navi.php" method="post">
-      <input type="hidden" name="navi" value="welcome_text.php">
-      <input type="hidden" name="naviScreen" value="welcome_screen.php">
+      <input type="hidden" name="navi_mobileDevices" value="welcome_text.php">
+      <input type="hidden" name="navi_bigScreen" value="welcome_screen.php">
       <label for="session">Please define a session ID (e.g. your name)</label>
       <br>
       <input type="text" id="session" name="session">
@@ -29,6 +29,6 @@ include("function/mysql_connect.php");
 
   <?php
   $timestamp = microtime(true);
-  $navi = $_POST["navi"];
+  $navi_mobileDevices = $_POST["navi_mobileDevices"];
   include("function/mysql_insert.php");
   ?>

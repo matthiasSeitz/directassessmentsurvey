@@ -10,20 +10,20 @@ $_SESSION['pageTimestamp'] = microtime(true);
 include("function/mysql_connect.php");
 
 # Database entry
-$navi = $_POST["navi"];
+$navi = $_POST["navi_mobileDevices"];
 $timestamp = microtime(true);
 include("function/mysql_insert.php");
 
 // Showing the content of mobileDevices and bigScreen
-$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
-$_SESSION['devices'] = $rows['navi'];
+$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi_mobileDevices` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
+$_SESSION['devices'] = $rows['navi_mobileDevices'];
 
-$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `naviScreen` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
-$_SESSION['screen'] = $rows['naviScreen'];
+$rows = $pdo->query("SELECT * FROM `dataDAS` WHERE `navi_bigScreen` NOT LIKE '' AND `session` LIKE '$session' ORDER BY `id` DESC LIMIT 1")->fetch();
+$_SESSION['screen'] = $rows['navi_bigScreen'];
 
 # Variables 
-$form_pre = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightblue; text-align:left;' id='navi' name='navi' value='";
-$form_pre_vid = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightgreen; text-align:left;' id='naviScreen' name='naviScreen' value='";
+$form_pre = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightblue; text-align:left;' id='navi_mobileDevices' name='navi_mobileDevices' value='";
+$form_pre_vid = "<form method='post'><input type='submit' style='width:200px; height:30px; background-color:lightgreen; text-align:left;' id='navi_bigScreen' name='navi_bigScreen' value='";
 
 $form_post = "'></form>";
 
@@ -70,7 +70,7 @@ echo $_SESSION['session'];
 </div>
 
 <form action="" method="post">
-  <input type="hidden" name='naviScreen' value='logout.php'>
+  <input type="hidden" name='navi_bigScreen' value='logout.php'>
   <input type="hidden" name="navi" value="logout.php">
   <input type="submit" class="button" name="submit" value="quit session">
 </form>

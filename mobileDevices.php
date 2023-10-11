@@ -49,7 +49,7 @@ include('function/mysql_connect.php');
 
 <?php 
 // This part is important to avoid continuous updating of the page.
-  $rows = $pdo->query("SELECT `navi` FROM `dataDAS` WHERE `id` > 0 ORDER BY `id` DESC LIMIT 1")->fetch();
+  $rows = $pdo->query("SELECT `navi_mobileDevices` FROM `dataDAS` WHERE `id` > 0 ORDER BY `id` DESC LIMIT 1")->fetch();
   $navi = $rows[0];
     include('function/mysql_insert.php'); 
 ?>
