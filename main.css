@@ -1,28 +1,11 @@
-
-/* Bei allen Veränderungen von mir steht "angepasst" dahinter*/
-
-
-@import url(font-awesome.min.css);
-/*@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
-
-/*
-	Epilogue by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
-
-
-
-/* Reset */
-
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		/* vertical-align: middle; /*angepasst*/
-    text-align: center; /*angepasst bzw. hinzugefügt */
+		vertical-align: middle; /*angepasst*/
+    	text-align: center; /*angepasst bzw. hinzugefügt */
 	}
 
 
@@ -36,8 +19,7 @@ fullscreen_box {
   justify-content: space-between;
   height: 100%;
   width:100%;
-    position: relative;
-  /*border: 3px solid red; */
+  position: relative;
 }
 
 /* content angepasst bzw. hinzugefügt */
@@ -46,6 +28,7 @@ content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding:5px;
   top:0px;
   bottom:0px;
   left:0px;
@@ -278,7 +261,6 @@ table
 		line-height: 1.5;
 		text-transform: uppercase;
 		letter-spacing: 0.375rem;
-		text-align:left; /* von mir angepasst */
 		margin-top:10px;
 		margin-bottom:20px;
 	}
@@ -476,14 +458,14 @@ h1 narrow {
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
-		line-height: 3.5em;
-		padding: 0 2em 0 2.375em;
+		height: 2.5em;
+		padding:5px;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
 		text-transform: uppercase;
 		letter-spacing: 0.325em;
-		height: 3.5em;
+		font-size: 1.0em; 
 	}
 	
 	input[type="button"],
@@ -593,7 +575,9 @@ h1 narrow {
 /* Input von mir angepasst bzw. ausgeschaltet. Das Design wird im Input Feld über class="button" angesteuert. Ergebnis ist somit identisch, aber ich kann unterschiedliche Designs erstellen für Emojis und Text. */
 
 	input[type="submit"],
-	input[type="reset"] {
+	input[type="reset"],
+	button,
+	.button  {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -607,9 +591,8 @@ h1 narrow {
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
-		height: 3.5em;
-		line-height: 3.5em;
-		padding: 0 2em 0 2.375em;
+		height: 2.5em;
+		padding:5px;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
@@ -652,7 +635,7 @@ h1 narrow {
 
 			input[type="submit"],
 			input[type="reset"] {
-				padding: 0;
+				/*padding: 0;*/
 			}
 
 		}

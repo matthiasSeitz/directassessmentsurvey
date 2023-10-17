@@ -17,11 +17,8 @@ session_start();
 echo "Session" .$_SESSION['session'];
 ?>
 
-<div class="center">
-  <div>
-  <br>
-  <h4>Please enter your name and the ID of the session you would like to attend.</h4>
-  <p></p>
+<content>
+  <h1>Please enter your name and the ID of the session you would like to attend.</h1>
 
   <form action="mobileDevices.php" method="post">
     <br>
@@ -33,8 +30,8 @@ echo "Session" .$_SESSION['session'];
     <br><br>
     <input type="submit" class="button" name="submit" value="submit">
   </form>
-</div> 
-</div>
+
+</content>
 
 </body>
 </html>

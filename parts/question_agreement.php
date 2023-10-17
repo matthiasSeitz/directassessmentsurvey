@@ -1,13 +1,7 @@
-<div class="center">
-  <div>
 <?php
-$question = 'declaration of consent';
-echo '<br><h3 class="align-center">'. $question. '</h3>';
+$question = 'Declaration of consent';
+echo '<h1>'. $question. '</h1>';
 ?>
-
-<div style="padding:10px">
-<p class="align-left" style="font-size:100%; color:black; font-style:italic">
-
 
 I agree to participate in the study. My participation is voluntary and I understand that I have the option to discontinue my participation in this study at any time, for any reason, without penalty.
 <br>
@@ -22,9 +16,3 @@ I declare that I consent to the recording of study data and its use in anonymize
 
   <input type="submit" name="item01" value='I agree'>
 </form>
-
-</p>
-</div>
-
-</div>
-</div>

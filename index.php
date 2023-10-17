@@ -14,21 +14,23 @@ session_start();
     <title>Direct Assessment Survey</title>
   </head>
 
-  <body>
+<body>
 
-  <content id="table">
-    <fullscreen_box>
-        <content style='background-color:lightgrey'>
-            <h1>Direct Assessment Survey</h1>
-            <p><a href="naviSessionStart.php">Start a new session.</a>
-                        <br>Your device (preferably a PC) will display the navigation page of the session.
-                        <br>Other devices can join the session by clicking the links below 
-                        <br>or scanning the QR Codes on the folloging navigation page on that device.</p>
-            <p><a href="mobileDevicesLogin.php">Join a session with a MOVILE DEVICE <br>for participation</a></p>
-            <p><a href="bigScreenLogin.php">Join a session with a BIG SCREEN <br>for displaying content</a></p>
+<div id="update">
+    <h1>Direct Assessment Survey</h1>
+    <p><form action="naviSessionStart.php">
+      <button type="submit">Start a new session</button>
+      </form>
+      <p>Your device (preferably a PC) will display the navigation page of the session. 
+        <br>Other devices can join the session by clicking the links below or scanning the QR Codes on the folloging navigation page on that device.</p>
+    <form action="mobileDevicesLogin.php">
+      <button type="submit">mobileDevices</button>
+    </form>
+      <p>Join a session with a MOVILE DEVICE for participation</p>
+    <form action="bigScreenLogin.php">
+      <button type="submit">bigScreen</button>
+    </form>
+      <p>Join a session with a BIG SCREEN for displaying content</p>
+</div>
 
-
-        </content>
-    </fullscreen_box>
-</content>
-  </body>
+</body>
