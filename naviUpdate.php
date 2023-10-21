@@ -21,7 +21,7 @@ $session = $_SESSION['session'];
          echo 'logout.php">';       
         } 
 
-        echo "Automatic logout after inactivity in " .round($delta,0) ." seconds.";
+        echo "<infobox>Auto logout in " .round($delta,0) ." seconds</infobox>";
 
 
       if(strpos($navi, "logout.php") !== false) {

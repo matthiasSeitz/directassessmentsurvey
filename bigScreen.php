@@ -6,7 +6,7 @@ if (isset($_POST['submit'])){
 $_SESSION['pageTimestamp'] = microtime(true);
 include("function/mysql_connect.php");
 ?>
-<html lang="de" class="notranslate" translate="no" dir="ltr">
+<html lang="en-US" class="notranslate" translate="no" dir="ltr">
 <head>
 <meta name="google" content="notranslate" />
 <meta charset="UTF-8">

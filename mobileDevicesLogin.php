@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="de" class="notranslate" translate="no" dir="ltr">
+<html lang="en" class="notranslate" translate="no" dir="ltr">
   <head>
     <meta name="google" content="notranslate" />
     <meta charset="UTF-8">

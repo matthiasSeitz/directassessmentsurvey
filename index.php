@@ -4,7 +4,7 @@ session_destroy();
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="de" class="notranslate" translate="no" dir="ltr">
+<html lang="en-US" class="notranslate" translate="no" dir="ltr">
   <head>
     <meta name="google" content="notranslate" />
     <meta charset="UTF-8">

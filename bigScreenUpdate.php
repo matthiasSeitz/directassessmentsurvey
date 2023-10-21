@@ -12,7 +12,7 @@ $navi = $rows['navi_bigScreen'];
 $now = microtime(true);
 
 $delta = 120 - ($now - $_SESSION['pageTimestamp']);
-echo "<qrcode class='top-left' style='z-index:1'><br>Logout in " .round($delta,0) ." s<qrcode>";
+echo "<infobox class='top-left' style='z-index:1'><br>Logout in " .round($delta,0) ." s<infobox>";
 
 if($delta < 0){
     echo '<meta http-equiv="refresh" content="0; URL=';

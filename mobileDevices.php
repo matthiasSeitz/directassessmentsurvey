@@ -8,7 +8,7 @@ $_SESSION['pageTimestamp'] = microtime(true);
 include('function/mysql_connect.php');
 ?>
 
-<html lang="de" class="notranslate" translate="no" dir="ltr">
+<html lang="en-US" class="notranslate" translate="no" dir="ltr">
 <head>
 <meta name="google" content="notranslate" />
 <meta charset="UTF-8">
@@ -41,7 +41,7 @@ include('function/mysql_connect.php');
     include('parts/header.php');
     
     echo "<content class='align-center'>";
-    echo "<qrcode class='top-right'><a href='logout.php'>exit session</a></qrcode>";
+    echo "<infobox class='top-right'><a href='logout.php'>exit session</a></infobox>";
     include ("parts/" .$_SESSION['currentNavi']);
   echo "</content>";
   ?>
