@@ -14,7 +14,7 @@ $navi = $rows['navi_mobileDevices'];
 $now = microtime(true);
 
   $delta = 120 - ($now - $_SESSION['pageTimestamp']);
-  echo "<infobox class='top-right'><br>Logout in " .round($delta,0) ." s<infobox>";
+  echo "Logout in " .round($delta,0) ."s";
   
   if($delta < 0){
         echo '<meta http-equiv="refresh" content="0; URL=';

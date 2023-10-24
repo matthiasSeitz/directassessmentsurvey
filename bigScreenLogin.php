@@ -29,6 +29,14 @@ session_start();
         </form>
       </div> 
   </div>
+
+  <footer>
+    <br>
+    <a href="index.php">Back</a>
+    <br>
+    <a href="https://itrk.legal/Ltu.8V.Fcq.html">Privacy Policy</a>
+  </footer>
+
 </fullscreen_box>
 
 </body>

@@ -13,6 +13,7 @@ include("function/mysql_connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css" />
     <title>Session ID</title>
+
   </head>
 
 <body>
@@ -21,13 +22,25 @@ include("function/mysql_connect.php");
     <form action="navi.php" method="post">
         <input type="hidden" name="navi_mobileDevices" value="welcome_text.php">
         <input type="hidden" name="navi_bigScreen" value="welcome_screen.php">
-        <label for="session">Please define a session ID (e.g. your name)</label>
+        <label for="session">Please define a session ID (e.g. an alias)</label>
         <br>
         <input type="text" id="session" name="session">
         <br><br>
         <input type="submit" class="button" name="login" value="define">
       </form>
+
+<br>
+
+
+  <footer>
+    <a href="index.php">Back</a>
+    <br>
+    <a href="https://itrk.legal/Ltu.8V.Fcq.html">Privacy Policy</a>
+  </footer>
+
+
 </content>
+
 
 </body>
 

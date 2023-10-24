@@ -32,16 +32,26 @@ include("function/mysql_connect.php");
       }, randomNumber);
     </script>
 
-<content id="update"></content>
+<infobox id="update"></infobox>
 
-<fullscreen_box style="background-color:black">
+  <?php
+    include('parts/header.php');
+  ?>
+
+<fullscreen_box>
+
   <?php
   echo "<content class='align-center'>";
-    include('parts/header.php');
     include ("parts/" .$_SESSION['currentNavi']);
   echo "</content>";
   ?>
 </fullscreen_box>
+
+<footer>
+  <a href="logout.php">Logout</a>
+  <br>
+  <a href="https://itrk.legal/Ltu.8V.Fcq.html">Privacy Policy</a>
+</footer>
 
 <?php 
 // This part is important to avoid continuous updating of the page.

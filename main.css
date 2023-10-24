@@ -1,11 +1,11 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe,  h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: middle; /*angepasst*/
-    text-align: center; /*angepasst bzw. hinzugefügt */
+    vertical-align: middle;
+    text-align: center;
 }
 
 
@@ -14,32 +14,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 fullscreen_box {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-height: 100%;
-width:100%;
-position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width:100%;
 }
 
-/* content angepasst bzw. hinzugefügt */
+.cookie-banner {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 90%;
+    background-color:#fff6c0;
+    border: 5px;
+    border-style: solid;
+    border-color:#666666;
+    border-radius:2em;
+    text-align: center;
+    padding: 10px;
+}
+
 content {
+position: absolute;
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
 padding:5px;
-top:0px;
-bottom:0px;
-left:0px;
-right:0px;
-position: absolute;
-/*border: 3px solid green; */
+width:100%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
 }
 
 infobox {
 flex:auto;
 position: relative;
+width:100%;
 }
 
 emoji {
@@ -51,7 +64,6 @@ width:500px;
 }
 
 
-/* "center" angepasst bzw. hinzugefügt */
 .center {
 display: flex;
 justify-content: center;
@@ -376,7 +388,7 @@ hr {
     border-color: #666666;
 }
 
-/* Button von mir angepasst*/
+/*Button*/
 
 input[type="button"],
 button,
@@ -403,6 +415,9 @@ button,
     text-transform: uppercase;
     letter-spacing: 0.325em;
     font-size: 1.2em; 
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #666666;
+    color: #444444 !important;
 }
 
 .naviButton {
@@ -416,21 +431,38 @@ button,
     line-height: 0;
 }
 
-
 .emoji {
-  font-size: 2.5em; /*angepasst*/
+  font-size: 2.5em;
   margin-left:1em;
 }
 
 
-    input[type="button"].icon:before,
-    button.icon:before,
-    .button.icon:before,
-    .naviButton.icon:before,
-  .emoji.icon:before {
-        margin-right: 0.5em;
-    }
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before,
+.naviButton.icon:before,
+.emoji.icon:before {
+    margin-right: 0.5em;
+    color: #999999;
+}
 
+input[type="button"]:hover,
+button:hover,
+.button:hover, 
+.naviButton:hover,
+.emoji:hover  {
+    color: #EF6480 !important;
+    box-shadow: inset 0 0 0 2px #EF6480;
+}
+
+
+    input[type="button"]:active,
+    button:active,
+    .button:active,
+    .naviButton:active,
+  .emoji:active {
+        background-color: rgba(239, 100, 128, 0.15);
+    }
 
     input[type="button"].fit,
     button.fit,
@@ -473,58 +505,10 @@ button,
     }
 
     @media screen and (max-width: 480px) {
-
         .naviButton {
             width:90%;
         }
-
-
-   /* input[type="button"],
-    button,
-    .button,
-    .naviButton,
-    .emoji {
-        padding: 1;
-        }*/
     }
-
-
-        input[type="button"],
-        button,
-        .button,
-        .naviButton,
-        .emoji {
-            background-color: transparent;
-            box-shadow: inset 0 0 0 2px #666666;
-            color: #444444 !important;
-        }
-        
-            input[type="button"]:hover,
-            button:hover,
-            .button:hover, 
-            .naviButton:hover,
-          .emoji:hover  {
-                color: #EF6480 !important;
-                box-shadow: inset 0 0 0 2px #EF6480;
-            }
-        
-        
-            input[type="button"]:active,
-            button:active,
-            .button:active,
-            .naviButton:active,
-          .emoji:active {
-                background-color: rgba(239, 100, 128, 0.15);
-            }
-        
-            input[type="button"].icon:before,
-            button.icon:before,
-            .button.icon:before 
-            .naviButton:before,
-          .emoji.icon:before  {
-                color: #999999;
-            }
-
 
 
 
@@ -536,9 +520,9 @@ form {
 
 label {
     display: block;
-    font-size: 1.9em; /*angepasst*/
+    font-size: 1.9em;
     font-weight: 400;
-    margin: 0 0 0 0; /*angepasst*/
+    margin: 0 0 0 0;
 }
 
 input[type="text"],
@@ -554,11 +538,11 @@ textarea {
     border: none;
     border: solid 1px;
     color: inherit;
-    display: center; /*angepasst*/
+    display: center;
     outline: 0;
     padding: 0 1em;
     text-decoration: none;
-    width: 50%; /*angepasst*/
+    width: 50%;
 }
 
     input[type="text"]:invalid,
@@ -631,7 +615,7 @@ input[type="radio"] {
         text-decoration: none;
         cursor: pointer;
         display: inline-block;
-        font-size: 1.5em; /* angepasst */
+        font-size: 1.5em;
         font-weight: 200;
         padding-left: 2.4em;
         padding-right: 0.75em;

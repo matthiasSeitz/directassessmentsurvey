@@ -7,10 +7,10 @@
   <input type="hidden" value="AA_style_pop" name="question">
 
   <input type="submit" class="emoji" name="item01" value='&#128077 &#128077'>
-  <input type="submit" class="emoji" name="item01" value='&#128077'>
-  <input type="submit" class="emoji" name="item01" value='&#128076'>
-  <input type="submit" class="emoji" name="item01" value='&#128078'>
-  <input type="submit" class="emoji" name="item01" value='&#128078 &#128078'>
+  <br><input type="submit" class="emoji" name="item01" value='&#128077'>
+  <br><input type="submit" class="emoji" name="item01" value='&#128076'>
+  <br><input type="submit" class="emoji" name="item01" value='&#128078'>
+  <br><input type="submit" class="emoji" name="item01" value='&#128078 &#128078'>
 </form>
 </div>
 </div>

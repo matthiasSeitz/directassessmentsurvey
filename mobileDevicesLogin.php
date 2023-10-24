@@ -31,6 +31,13 @@ echo "Session" .$_SESSION['session'];
     <input type="submit" class="button" name="submit" value="submit">
   </form>
 
+  <footer>
+    <br>
+    <a href="index.php">Back</a>
+    <br>
+    <a href="https://itrk.legal/Ltu.8V.Fcq.html">Privacy Policy</a>
+  </footer>
+
 </content>
 
 </body>

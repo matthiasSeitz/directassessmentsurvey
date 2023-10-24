@@ -34,18 +34,27 @@ include('function/mysql_connect.php');
       }, randomNumber);
     </script>
 
-<content id="update"></content> <!-- contains the js-code. Position is important-->
+
+<infobox id="update"></infobox> <!-- contains the js-code. Position is important-->
+<?php
+echo include('parts/header.php');
+?>
 
 <fullscreen_box>
-  <?php
-    include('parts/header.php');
-    
+
+<?php
     echo "<content class='align-center'>";
-    echo "<infobox class='top-right'><a href='logout.php'>exit session</a></infobox>";
     include ("parts/" .$_SESSION['currentNavi']);
   echo "</content>";
   ?>
+
 </fullscreen_box>
+
+<footer>
+  <a href="logout.php">Logout</a>
+  <br>
+  <a href="https://itrk.legal/Ltu.8V.Fcq.html">Privacy Policy</a>
+</footer>
 
 <?php 
 // This part is important to avoid continuous updating of the page.

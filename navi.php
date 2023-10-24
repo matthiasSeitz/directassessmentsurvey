@@ -141,7 +141,13 @@ echo $_SESSION['session'];
             </div>        
         </div>
     </div>
+
+    <footer>
+      <a href="https://itrk.legal/Ltu.8V.Fcq.html">Privacy Policy</a>
+    </footer>
+
 </fullscreen_box>
+
 </body>
 </html>
 
