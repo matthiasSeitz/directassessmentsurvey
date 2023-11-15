@@ -1,7 +1,7 @@
 # directassessmentsurvey
 
-
-
+##  SQL code for creating the table in the database
+```
 CREATE TABLE `dataDAS` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` decimal(14,4) NOT NULL,
@@ -26,3 +26,4 @@ CREATE TABLE `dataDAS` (
   `item13` mediumtext,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8	
+```
